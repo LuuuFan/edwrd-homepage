@@ -115,6 +115,25 @@ header .logo .logo-container {
   width: 30px;
   height: 30px;
 }
+header nav {
+  display: flex;
+  align-items: center;
+}
+header nav .hamburger {
+  visibility: hidden;
+}
+header nav .login-button {
+  color: #854dff;
+  display: flex;
+  align-items: center;
+}
+header nav .login-button i {
+  font-size: 18px;
+  margin-right: 7px;
+}
+header nav .login-button:hover {
+  color: #854dff;
+}
 header nav ul {
   display: flex;
   align-items: center;
@@ -127,23 +146,13 @@ header nav ul li:hover {
   transition: all 0.8s;
   color: gray;
 }
-header nav ul .login-button {
-  color: #854dff;
-}
-header nav ul .login-button i {
-  font-size: 18px;
-  margin-right: 7px;
-}
-header nav ul .login-button:hover {
-  color: #854dff;
-}
 header nav ul .nav-more {
   position: relative;
 }
 header nav ul .dropdown {
   visibility: hidden;
   position: absolute;
-  top: 100%;
+  top: 110%;
   left: -150%;
   z-index: 10;
   background-color: black;
@@ -152,7 +161,6 @@ header nav ul .dropdown {
   flex-direction: column;
   font-size: 12px;
   width: 150px;
-  overflow: hidden;
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
   align-items: flex-start;
 }
@@ -162,19 +170,21 @@ header nav ul .dropdown li {
   width: 100%;
   border-bottom: 1px solid black;
   text-indent: 20px;
+  border-radius: 5px;
+  overflow: hidden;
 }
 header nav ul .dropdown li:hover {
   border-bottom: 1px solid #ffffff;
   transition: all 0.8s;
 }
 header nav ul .dropdown:after, header nav ul .dropdown:before {
+  position: absolute;
   content: " ";
-  bottom: 100%;
-  left: 40%;
+  top: -20px;
+  left: 85%;
   border: 2px solid transparent;
   height: 0;
   width: 0;
-  position: absolute;
   pointer-events: none;
 }
 header nav ul .dropdown:after {
@@ -324,6 +334,7 @@ header nav ul .nav-more:hover .dropdown {
 
 .work {
   width: 40%;
+  min-width: 650px;
   margin: 50px auto;
   text-align: center;
 }
@@ -375,6 +386,7 @@ header nav ul .nav-more:hover .dropdown {
   padding: 50px 0 30px 0;
 }
 .business .session-1 {
+  min-width: 650px;
   text-align: center;
   width: 40%;
   margin: 40px auto;
@@ -405,6 +417,9 @@ header nav ul .nav-more:hover .dropdown {
 
 footer {
   width: 100%;
+}
+footer .footer-category {
+  min-width: 650px;
 }
 footer ul {
   width: 40%;
@@ -442,6 +457,61 @@ footer .copyright {
   width: 40%;
   margin: 10px auto;
   text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+  header .logo {
+    margin-left: 15px;
+  }
+  header nav .hamburger {
+    visibility: inherit;
+    color: gray;
+    position: relative;
+    margin: 0 30px;
+  }
+  header nav .hamburger:hover {
+    color: #854dff;
+    transition: all 0.8s;
+  }
+  header nav .hamburger:hover ~ ul {
+    display: block;
+  }
+  header nav ul:hover {
+    display: block;
+  }
+  header nav ul {
+    display: none;
+    width: 150px;
+    position: absolute;
+    background-color: white;
+    padding: 0;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    top: 65%;
+    right: -20px;
+  }
+  header nav ul .nav-more .dropdown {
+    display: none;
+    position: static;
+    background-color: white;
+    box-shadow: none;
+  }
+  header nav ul .nav-more .dropdown li {
+    border: none;
+    color: #333;
+  }
+  header nav ul .nav-more .dropdown li:hover {
+    color: #546a76;
+    text-decoration: underline;
+  }
+  header nav ul .nav-more .dropdown:after, header nav ul .nav-more .dropdown:before {
+    content: "";
+    border: 0px;
+  }
+  header nav ul .nav-more:hover .dropdown {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

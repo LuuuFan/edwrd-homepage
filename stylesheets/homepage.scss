@@ -1,4 +1,5 @@
 @import './reset';
+@import './mobile_home';
 @import url("https://use.fontawesome.com/releases/v5.0.9/css/all.css");
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
@@ -40,6 +41,23 @@ header{
 		}
 	}
 	nav{
+		display: flex;
+		align-items: center;
+		.hamburger{
+			visibility: hidden;
+		}
+		.login-button{
+			color: $purple;
+			display: flex;
+			align-items: center;
+			i{
+				font-size: 18px;
+				margin-right: 7px;
+			}
+		}
+		.login-button:hover{
+			color: $purple;
+		}
 		ul{
 			display: flex;
 			align-items: center;
@@ -51,23 +69,13 @@ header{
 				transition: all .8s;
 				color: gray;
 			}
-			.login-button{
-				color: $purple;
-				i{
-					font-size: 18px;
-					margin-right: 7px;
-				}
-			}
-			.login-button:hover{
-				color: $purple;
-			}
 			.nav-more{
 				position: relative;
 			}
 			.dropdown{
 				visibility: hidden;
 				position: absolute;
-				top: 100%;
+				top: 110%;
 				left: -150%;
 				z-index: 10;
 				background-color: black;
@@ -76,7 +84,6 @@ header{
 				flex-direction: column;
 				font-size: 12px;
 				width: 150px;
-				overflow: hidden;
   			box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2);
 				align-items: flex-start;
 				li{
@@ -85,6 +92,8 @@ header{
 					width: 100%;
 					border-bottom: 1px solid black;
 					text-indent: 20px;
+					border-radius: 5px;
+					overflow: hidden;
 				}
 				li:hover{
 					border-bottom: 1px solid $white;
@@ -92,13 +101,13 @@ header{
 				}
 			}
 			.dropdown:after, .dropdown:before{
+          position: absolute;
 					content: " ";
-          bottom: 100%;
-          left: 40%;
+					top: -20px;
+          left: 85%;
           border: 2px solid transparent;
           height: 0;
           width: 0;
-          position: absolute;
           pointer-events: none;
 			}
 			.dropdown:after {
@@ -258,6 +267,7 @@ header{
 
 .work{
 	width: 40%;
+	min-width: 650px;
 	margin: 50px auto;
 	text-align: center;
 	h2{
@@ -308,6 +318,7 @@ header{
 	color: $white;
 	padding: 50px 0 30px 0;
 	.session-1{
+		min-width: 650px;
 		text-align: center;
 		width: 40%;
 		margin: 40px auto;
@@ -339,6 +350,9 @@ header{
 
 footer{
 	width: 100%;
+	.footer-category{
+		min-width: 650px;
+	}
 	ul{
 		width: 40%;
 		margin: 50px auto;
@@ -375,5 +389,68 @@ footer{
 		width: 40%;
 		margin: 10px auto;
 		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	header{
+		.logo{
+			margin-left: 15px;
+		}
+		nav{
+			.hamburger{
+				visibility: inherit;
+				color: gray;
+				position: relative;
+				margin: 0 30px;
+			}
+			.hamburger:hover{
+				color: $purple;
+				transition: all .8s;
+			}
+			.hamburger:hover ~ ul{
+				display: block;
+			}
+			ul:hover{
+				display: block;
+			}
+			ul{
+				display: none;
+				width: 150px;
+				position: absolute;
+				background-color: white;
+				padding: 0;
+  			box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2);
+				border-radius: 5px;
+				overflow: hidden;
+				top: 65%;
+				right: -20px;
+				.nav-more{
+					.dropdown{
+						display: none;
+						position: static;
+						background-color: white;
+						box-shadow: none;
+						li{
+							border: none;
+							color: #333;
+						}
+						li:hover{
+							color: $dark-blue;
+							text-decoration: underline;
+  						// box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2);
+						}
+					}
+					.dropdown:after, .dropdown:before{
+						content: "";
+						border: 0px;
+
+					}
+				}
+				.nav-more:hover .dropdown{
+					display: block;
+				}
+			}
+		}
 	}
 }
