@@ -3,6 +3,10 @@
 <head>
 	<title>Edwrd</title>
 	<link rel="icon" type='image/png' href="images/colorfulogo4.png">
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 </head>
 <body>
 	<header>
@@ -45,16 +49,16 @@
 		</nav>
 	</header>
 	<div class='home-nav-dot'>
-		<a href="/home">
+		<a data-link="#home" class='bold'>
 			<i class="far fa-circle"></i>
 		</a>
-		<a href="/work">
+		<a data-link="#work">
 			<i class="far fa-circle"></i>
 		</a>
-		<a href="/business">
+		<a data-link="#business">
 			<i class="far fa-circle"></i>
 		</a>
-		<a href="/footer">
+		<a data-link="#footer">
 			<i class="far fa-circle"></i>
 		</a>
 	</div>
@@ -150,6 +154,7 @@
 			<span></span>
 		</div>
 	</footer>
+	<script type="text/javascript" src='javascript/home.js'></script>
 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 </body>
 </html>

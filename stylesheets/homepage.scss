@@ -120,6 +120,7 @@ header{
 
 .home-nav-dot{
 	position: fixed;
+	z-index: 5;
 	right: 0;
 	top: 50%;
 	height: 150px;
@@ -135,6 +136,15 @@ header{
 			cursor: pointer;
 		}
 	}
+	.bold{
+		i{
+			font-weight: bold;
+		}
+	}
+}
+
+.black{
+	color: black;
 }
 
 .login-session{

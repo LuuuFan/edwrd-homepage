@@ -193,6 +193,7 @@ header nav ul .nav-more:hover .dropdown {
 
 .home-nav-dot {
   position: fixed;
+  z-index: 5;
   right: 0;
   top: 50%;
   height: 150px;
@@ -208,6 +209,13 @@ header nav ul .nav-more:hover .dropdown {
 .home-nav-dot a i {
   font-size: 10px;
   cursor: pointer;
+}
+.home-nav-dot .bold i {
+  font-weight: bold;
+}
+
+.black {
+  color: black;
 }
 
 .login-session {
