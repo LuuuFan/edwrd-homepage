@@ -459,7 +459,7 @@ footer .copyright {
   text-align: center;
 }
 
-@media only screen and (max-width: 800px) {
+@media (max-width: 800px) {
   header .logo {
     margin-left: 15px;
   }
@@ -475,9 +475,11 @@ footer .copyright {
   }
   header nav .hamburger:hover ~ ul {
     display: block;
+    transition: all 0.8s;
   }
   header nav ul:hover {
     display: block;
+    transition: all 0.8s;
   }
   header nav ul {
     display: none;
@@ -491,6 +493,9 @@ footer .copyright {
     top: 65%;
     right: -20px;
   }
+  header nav ul li {
+    margin: 15px 0;
+  }
   header nav ul .nav-more .dropdown {
     display: none;
     position: static;
@@ -500,10 +505,12 @@ footer .copyright {
   header nav ul .nav-more .dropdown li {
     border: none;
     color: #333;
+    text-indent: 7px;
   }
   header nav ul .nav-more .dropdown li:hover {
     color: #546a76;
     text-decoration: underline;
+    transition: all 0.8s;
   }
   header nav ul .nav-more .dropdown:after, header nav ul .nav-more .dropdown:before {
     content: "";
@@ -511,6 +518,7 @@ footer .copyright {
   }
   header nav ul .nav-more:hover .dropdown {
     display: block;
+    transition: all 0.8s;
   }
 }
 
