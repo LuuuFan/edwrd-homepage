@@ -19,13 +19,13 @@ window.addEventListener('scroll', () => {
 			if (currentBold && currentBold !== el) currentBold.classList.remove('bold');
 			el.classList.add('bold');
 		}
-	} else if (window.pageYOffset > 1600 && window.pageYOffset <= 1900) {
+	} else if (window.pageYOffset > 1600 && window.pageYOffset <= 1920) {
 		el = document.querySelector('a[data-link="#business"]');
 		if (document.querySelector('.home-nav-dot').querySelector) {
 			if (currentBold && currentBold !== el) currentBold.classList.remove('bold');
 			el.classList.add('bold');
 		}
-	} else if (window.pageYOffset > 1900) {
+	} else if (window.pageYOffset > 1920) {
 		el = document.querySelector('a[data-link="#footer"]');
 		if (document.querySelector('.home-nav-dot').querySelector) {
 			if (currentBold && currentBold !== el) currentBold.classList.remove('bold');
@@ -44,7 +44,7 @@ document.querySelector('.home-nav-dot').querySelectorAll('a').forEach(a => {
 		e.currentTarget.classList.add('bold');
 		const top = $(`${e.currentTarget.dataset.link}`).offset().top;
 		$('html, body').animate({
-			scrollTop: `${top - 70}px`
+			scrollTop: `${top - 200}px`
 		}, 800);
 	})
 })
