@@ -1,0 +1,249 @@
+@import './reset';
+@import url("https://use.fontawesome.com/releases/v5.0.9/css/all.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+$white: #ffffff;
+$gray: #ededed;
+$dark-blue: #546a76;
+$light-blue: #c6dbf0;
+$pink: #ff5465;
+$purple: rgba(133, 77, 255, 1);
+
+h1, h2, h3, h4{
+	font-family: 'Montserrat', sans-serif;
+}
+
+header{
+	width: 100%;
+	height: 7vh;
+	position: fixed;
+	top: 0;
+	z-index: 5;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;	
+	background-color: white;
+	.logo{
+		display: flex;
+		align-items: center;
+		margin-left: 15%;
+		cursor: pointer;
+		h1{
+			font-size: 28px;
+			color: $pink;
+			font-weight: bold;
+		}
+		.logo-container{
+			margin-left: 20px;
+			width: 30px;
+			height: 30px;
+		}
+	}
+	nav{
+		ul{
+			display: flex;
+			align-items: center;
+			margin-right: 40px;
+			li{
+				padding: 7px 15px;
+			}
+			li:hover{
+				transition: all .8s;
+				color: gray;
+			}
+			.login-button{
+				color: $purple;
+				i{
+					font-size: 18px;
+					margin-right: 7px;
+				}
+			}
+			.login-button:hover{
+				color: $purple;
+			}
+		}
+	}
+}
+
+.login-session{
+	margin-top: 7vh;
+	width: 100%;
+	position: relative;
+	height: 93vh;
+	.login-background{
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		background-color: $dark-blue;
+		z-index: -1;
+		top: 0;
+		left: 0;
+	}
+	.login{
+		margin: 0 auto;
+		height: 100%;
+		width: 571px;
+		z-index: 3;
+		position: relative;
+	}
+	.login-window{
+		position: absolute;
+		bottom: -20px;
+		height: 508px;
+		background-color: white;
+		text-align: center;
+		// display: flex;
+		// flex-direction: column;
+		// align-items: center;
+		// justify-content: space-around;
+		h2{
+			color: $dark-blue;
+			letter-spacing: 5px;
+			font-size: 42px;
+			width: 70%;
+			margin: 40px auto;
+			font-weight: 900;
+			text-align: center;
+		}
+		form{
+			width: 70%;
+			margin: 30px auto;
+			div{
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin-bottom: 15px;
+				input{
+					padding: 7px 15px;
+					border: 1px solid lightgray;
+					text-align: left;
+				}
+				input:first-of-type{
+					width: 55%;
+				}
+				input:last-of-type{
+					width: 25%;
+				}
+			}
+			input[type='submit']{
+				color: $white;
+				width: 100%;
+				padding-top: 7px;
+				padding-bottom: 7px;
+				background-color: $pink;
+			}
+			input[type='submit']:hover{
+				background-color: $purple;
+				transition: all .8s;
+			}
+		}
+		span:first-of-type{
+			color: $dark-blue;
+		}
+		span:last-of-type{
+			margin-top: 40px;
+			color: gray;
+		}
+		.social-login{
+			width: 70%;
+			margin: 40px auto;
+			display: flex;
+			align-items:center;
+			justify-content: space-between;
+			button{
+				font-size: 12px;
+				width: 45%;
+				color: $white;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				border-radius: 5px;
+			}
+			button:hover{
+				background-color: rgba(58, 181, 205, 1);
+				transition: all .8s;
+			}
+			.facebook{
+				background-color: rgba(24, 51, 158, 1);
+				border: solid rgba(58, 181, 205, 1) 0px;
+			}
+			.instagram{
+				background-color: rgba(252, 123, 68, 1);
+
+			}
+		}
+	}
+}
+
+.work{
+	width: 40%;
+	margin: 50px auto;
+	text-align: center;
+	h2{
+		font-size: 42px;
+		font-weight: 900;
+		margin: 50px auto;
+	}
+	.work-detail{
+		width: 100%;
+		.work-detail-item{
+			display: flex;
+			width: 100%;
+			margin: 30px 0;
+			.img-container{
+				flex: 1;
+  			box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2);
+				cursor: pointer;
+			}
+			.img-container:hover{
+				opacity: 0.5;
+				transition: all .8s;
+			}
+			.work-detail-item-content{
+				width: 40%;
+				padding-left: 20px;
+				padding-right: 20px;
+				text-align: left;
+				h3{
+					font-size: 36px;
+					margin-top: 0;
+				}
+				span{
+					line-height: 1.5;
+					transition: all .5s;
+				}
+			}
+		}
+	}
+}
+
+.business{
+	width: 100%;
+	.session-1{
+		text-align: center;
+		width: 50%;
+		margin: 0 auto;
+	}
+}
+
+footer{
+	width: 100%;
+	ul{
+		width: 50%;
+		margin: 50px auto;
+		display: flex;
+		align-items: flex-start;
+		flex-direction: row;
+		justify-content: space-around;
+		li{
+			width: 33%;
+			ul{
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				li{
+					width: 100%;
+				}
+			}
+		}
+	}
+}
