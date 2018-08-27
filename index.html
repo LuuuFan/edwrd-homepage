@@ -3,7 +3,6 @@
 <head>
 	<title>Edwrd</title>
 	<link rel="icon" type='image/png' href="images/colorfulogo4.png">
-
 </head>
 <body>
 	<header>
@@ -28,12 +27,38 @@
 					<li>Vendor Portal</li>
 				</a>
 				<a href="#" class='nav-more'>
-					<li>More</li>
+					<li>More
+						<ul class='dropdown'>
+							<li>Customer Profile</li>
+							<li>Customer Orders</li>
+							<li>Customer Messages</li>
+							<li>Vendor Items</li>
+							<li>Vendor Orders</li>
+							<li>Vendor Messages</li>
+							<li>Canvas</li>
+							<li>About</li>
+							<li>How it works</li>
+						</ul>
+					</li>
 				</a>
 			</ul>
 		</nav>
 	</header>
-	<div class='login-session'>
+	<div class='home-nav-dot'>
+		<a href="/home">
+			<i class="far fa-circle"></i>
+		</a>
+		<a href="/work">
+			<i class="far fa-circle"></i>
+		</a>
+		<a href="/business">
+			<i class="far fa-circle"></i>
+		</a>
+		<a href="/footer">
+			<i class="far fa-circle"></i>
+		</a>
+	</div>
+	<div class='login-session' id='home'>
 		<div class='login-background'></div>
 		<div class='login'>
 			<div class='login-window'>
@@ -54,7 +79,7 @@
 			</div>
 		</div>
 	</div>
-	<div class='work'>
+	<div class='work' id='work'>
 		<h2>How does it work?</h2>
 		<div class='work-detail'>
 			<div class='work-detail-item'>
@@ -86,13 +111,17 @@
 			</div>
 		</div>
 	</div>
-	<div class='business'>
+	<div class='business' id='business'>
 		<div class='session-1'>
 			<h4>The Business Times</h4>
-			<span>"The smartest product in the market"</span>
+			<hr>
+			<h3>"The smartest product in the market"</h3>
+		</div>
+		<div class='nav-dot'>
+			<i class="far fa-circle"></i>
 		</div>
 	</div>
-	<footer>
+	<footer id='footer'>
 		<ul>
 			<li>HELP & SUPPORT
 				<ul>

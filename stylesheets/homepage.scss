@@ -61,6 +61,78 @@ header{
 			.login-button:hover{
 				color: $purple;
 			}
+			.nav-more{
+				position: relative;
+			}
+			.dropdown{
+				visibility: hidden;
+				position: absolute;
+				top: 100%;
+				left: -150%;
+				z-index: 10;
+				background-color: black;
+				border-radius: 5px;
+				display: flex;
+				flex-direction: column;
+				font-size: 12px;
+				width: 150px;
+				overflow: hidden;
+  			box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2);
+				align-items: flex-start;
+				li{
+					padding: 10px 0;
+					color: $white;
+					width: 100%;
+					border-bottom: 1px solid black;
+					text-indent: 20px;
+				}
+				li:hover{
+					border-bottom: 1px solid $white;
+					transition: all .8s;
+				}
+			}
+			.dropdown:after, .dropdown:before{
+					content: " ";
+          bottom: 100%;
+          left: 40%;
+          border: 2px solid transparent;
+          height: 0;
+          width: 0;
+          position: absolute;
+          pointer-events: none;
+			}
+			.dropdown:after {
+        border-bottom-color: black;
+        border-width: 10px;
+        margin-left: -10px;
+      }
+      .dropdown:before {
+        border-bottom-color: black;
+        border-width: 10px;
+        margin-left: -10px;
+      }
+			.nav-more:hover .dropdown{
+				visibility: inherit;
+			}
+		}
+	}
+}
+
+.home-nav-dot{
+	position: fixed;
+	right: 0;
+	top: 50%;
+	height: 150px;
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	color: white;
+	a{
+		cursor: pointer;
+		padding: 3px;
+		i{
+			font-size: 10px;
+			cursor: pointer;
 		}
 	}
 }
@@ -193,6 +265,10 @@ header{
 				flex: 1;
   			box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2);
 				cursor: pointer;
+				img{
+					height: 100%;
+					object-fit: cover;
+				}
 			}
 			.img-container:hover{
 				opacity: 0.5;
@@ -217,31 +293,68 @@ header{
 }
 
 .business{
+	background-color: $pink;
 	width: 100%;
+	color: $white;
+	padding: 50px 0 30px 0;
 	.session-1{
 		text-align: center;
-		width: 50%;
-		margin: 0 auto;
+		width: 40%;
+		margin: 40px auto;
+		hr{
+			border: 0;
+			width: 50px;
+			border-bottom: 1px solid $white;
+		}
+		h4{
+			font-weight: normal;
+		}
+		h3{
+			font-size: 42px;
+			font-weight: bold;
+			width: 80%;
+			margin: 40px auto;
+			line-height: 1.5;
+		}
+	}
+	.nav-dot{
+		margin: 20px auto;
+		text-align: center;
+		i{
+			font-size: 10px;
+			cursor: pointer;
+		}
 	}
 }
 
 footer{
 	width: 100%;
 	ul{
-		width: 50%;
+		width: 40%;
 		margin: 50px auto;
 		display: flex;
 		align-items: flex-start;
 		flex-direction: row;
 		justify-content: space-around;
 		li{
-			width: 33%;
+			color: $pink;
+			font-weight: bold;
+			cursor: pointer;
 			ul{
+				margin: 15px auto;
 				width: 100%;
 				display: flex;
 				flex-direction: column;
 				li{
 					width: 100%;
+					color: #333;
+					font-weight: normal;
+					margin: 15px 0;
+				}
+				li:hover{
+					color: $dark-blue;
+					text-decoration: underline;
+					transition: all .8s;
 				}
 			}
 		}
