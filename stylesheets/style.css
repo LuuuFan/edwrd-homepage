@@ -84,6 +84,92 @@ input[type=submit] {
   clear: both;
 }
 
+.login-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 15;
+  height: 100vh;
+  width: 100vw;
+  transition: all 1s;
+}
+.login-page .header {
+  width: 90%;
+  padding: 50px 0;
+  font-size: 56px;
+  text-align: right;
+}
+.login-page .header span {
+  cursor: pointer;
+}
+.login-page .header span:hover {
+  color: gray;
+  transition: all 0.8s;
+}
+.login-page .login-window {
+  width: 800px;
+  margin: 10% auto;
+  height: 40%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.login-page .login-window h1 {
+  font-size: 48px;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+.login-page .login-window .session-form {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+.login-page .login-window .session-form form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid lightgray;
+  height: 100%;
+  justify-content: space-around;
+}
+.login-page .login-window .session-form form div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.login-page .login-window .session-form form div input[type=submit] {
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  background-color: #854dff;
+  font-weight: bold;
+  color: white;
+}
+.login-page .login-window .session-form form div input[type=submit]:hover {
+  background-color: white;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+  border: none;
+  color: #854dff;
+}
+.login-page .login-window .session-form form div strong {
+  font-weight: bold;
+}
+.login-page .login-window .session-form form input {
+  width: 70%;
+  border: 1px solid lightgray;
+  padding: 10px 0;
+  text-align: left;
+  text-indent: 15px;
+}
+.login-page .login-window .session-form .social-login-page {
+  flex: 1;
+}
+
 h1, h2, h3, h4 {
   font-family: "Montserrat", sans-serif;
 }
@@ -461,6 +547,14 @@ footer .copyright {
   width: 40%;
   margin: 10px auto;
   text-align: center;
+}
+
+.modal {
+  display: none;
+}
+
+.is-open {
+  display: block;
 }
 
 @media only screen and (min-device-width: 480px) and (max-width: 768px) {

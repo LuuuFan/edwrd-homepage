@@ -1,5 +1,5 @@
 @import './reset';
-@import './mobile_home';
+@import './login';
 @import url("https://use.fontawesome.com/releases/v5.0.9/css/all.css");
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
@@ -394,6 +394,14 @@ footer{
 		margin: 10px auto;
 		text-align: center;
 	}
+}
+
+.modal{
+	display: none;
+}
+
+.is-open{
+	display: block;
 }
 
 @media only screen and (min-device-width: 480px) and (max-width: 768px) {

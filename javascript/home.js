@@ -48,3 +48,15 @@ document.querySelector('.home-nav-dot').querySelectorAll('a').forEach(a => {
 		}, 800);
 	})
 })
+
+const loadLoginPage = (e) => {
+	e.preventDefault();
+	const homePage = document.querySelector('.home-page');
+	const loginPage = document.querySelector('.login-page');
+	homePage.classList.add('modal');
+	loginPage.classList.add('is-open');
+	loginPage.classList.remove('modal');
+};
+
+document.querySelector('.login-button').addEventListener('click', loadLoginPage);
+

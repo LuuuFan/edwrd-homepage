@@ -10,151 +10,175 @@
   crossorigin="anonymous"></script>
 </head>
 <body>
-	<header>
-		<div class='logo'>
-			<h1>edwrd</h1>
-			<div class='logo-container'>
-				<img src="images/colorfulogo4.png">
+	<div class='home-page'>
+		<header>
+			<div class='logo'>
+				<h1>edwrd</h1>
+				<div class='logo-container'>
+					<img src="images/colorfulogo4.png">
+				</div>
 			</div>
-		</div>
-		<nav>
-			<a href="#" class='login-button'>
-				<i class="fas fa-user-circle"></i>
-				Log In
+			<nav>
+				<a href="#" class='login-button'>
+					<i class="fas fa-user-circle"></i>
+					Log In
+				</a>
+				<div class='hamburger'>
+					<i class="fas fa-bars"></i>
+				</div>
+				<ul>
+					<a href="#">
+						<li>Home</li>
+					</a>
+					<a href="#">
+						<li>Vendor Portal</li>
+					</a>
+					<a href="#" class='nav-more'>
+						<li>More
+							<ul class='dropdown'>
+								<li>Customer Profile</li>
+								<li>Customer Orders</li>
+								<li>Customer Messages</li>
+								<li>Vendor Items</li>
+								<li>Vendor Orders</li>
+								<li>Vendor Messages</li>
+								<li>Canvas</li>
+								<li>About</li>
+								<li>How it works</li>
+							</ul>
+						</li>
+					</a>
+				</ul>
+			</nav>
+		</header>
+		<div class='home-nav-dot'>
+			<a data-link="#home" class='bold'>
+				<i class="far fa-circle"></i>
 			</a>
-			<div class='hamburger'>
-				<i class="fas fa-bars"></i>
-			</div>
-			<ul>
-				<a href="#">
-					<li>Home</li>
-				</a>
-				<a href="#">
-					<li>Vendor Portal</li>
-				</a>
-				<a href="#" class='nav-more'>
-					<li>More
-						<ul class='dropdown'>
-							<li>Customer Profile</li>
-							<li>Customer Orders</li>
-							<li>Customer Messages</li>
-							<li>Vendor Items</li>
-							<li>Vendor Orders</li>
-							<li>Vendor Messages</li>
-							<li>Canvas</li>
-							<li>About</li>
-							<li>How it works</li>
-						</ul>
-					</li>
-				</a>
-			</ul>
-		</nav>
-	</header>
-	<div class='home-nav-dot'>
-		<a data-link="#home" class='bold'>
-			<i class="far fa-circle"></i>
-		</a>
-		<a data-link="#work">
-			<i class="far fa-circle"></i>
-		</a>
-		<a data-link="#business">
-			<i class="far fa-circle"></i>
-		</a>
-		<a data-link="#footer">
-			<i class="far fa-circle"></i>
-		</a>
-	</div>
-	<div class='login-session' id='home'>
-		<div class='login-background'></div>
-		<div class='login'>
-			<div class='login-window'>
-				<h2>Celebrations made easy</h2>
-				<span>For the busy professional, by the busy professional.</span>
-				<form>
-					<div>
-						<input type="text" name="email" placeholder="Email">
-						<input type="text" name="zipcode" placeholder="Zip">
+			<a data-link="#work">
+				<i class="far fa-circle"></i>
+			</a>
+			<a data-link="#business">
+				<i class="far fa-circle"></i>
+			</a>
+			<a data-link="#footer">
+				<i class="far fa-circle"></i>
+			</a>
+		</div>
+		<div class='login-session' id='home'>
+			<div class='login-background'></div>
+			<div class='login'>
+				<div class='login-window'>
+					<h2>Celebrations made easy</h2>
+					<span>For the busy professional, by the busy professional.</span>
+					<form>
+						<div>
+							<input type="text" name="email" placeholder="Email">
+							<input type="text" name="zipcode" placeholder="Zip">
+						</div>
+						<input type="submit" name="" value="Create Account">
+					</form>
+					<span>-or-</span>
+					<div class='social-login'>
+						<button class='facebook'>Continue with Facebook</button>
+						<button class='instagram'>Continue with Instagram</button>
 					</div>
-					<input type="submit" name="" value="Create Account">
+				</div>
+			</div>
+		</div>
+		<div class='work' id='work'>
+			<h2>How does it work?</h2>
+			<div class='work-detail'>
+				<div class='work-detail-item'>
+					<div class='img-container'>
+						<img src="images/click.jpg">
+					</div>
+					<div class='work-detail-item-content'>
+						<h3>Click It.</h3>
+						<span>I'm a paragraph. Click here to add your own text and edit me. It's easy. Just click "Edit Text" or double click me to add your own content and make changes to the font. I'm a great place for you to tell a story and let your users know a little more about you.</span>
+					</div>
+				</div>
+				<div class='work-detail-item'>
+					<div class='work-detail-item-content'>
+						<h3>Gift It.</h3>
+						<span>I'm a paragraph. Click here to add your own text and edit me. It's easy. Just click "Edit Text" or double click me to add your own content and make changes to the font. I'm a great place for you to tell a story and let your users know a little more about you.</span>
+					</div>
+					<div class='img-container'>
+						<img src="images/gift.jpg">
+					</div>
+				</div>
+				<div class='work-detail-item'>
+					<div class='img-container'>
+						<img src="images/send.jpg">
+					</div>
+					<div class='work-detail-item-content'>
+						<h3>Send It.</h3>
+						<span>I'm a paragraph. Click here to add your own text and edit me. It's easy. Just click "Edit Text" or double click me to add your own content and make changes to the font. I'm a great place for you to tell a story and let your users know a little more about you.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='business' id='business'>
+			<div class='session-1'>
+				<h4>The Business Times</h4>
+				<hr>
+				<h3>"The smartest product in the market"</h3>
+			</div>
+			<div class='nav-dot'>
+				<i class="far fa-circle"></i>
+			</div>
+		</div>
+		<footer id='footer'>
+			<ul class='footer-category'>
+				<li>HELP & SUPPORT
+					<ul>
+						<li>HELP CENTER</li>
+						<li>WHERE WE ARE</li>
+						<li>PRIVACY & TERMS</li>
+					</ul>
+				</li>
+				<li>EDWRD
+					<ul>
+						<li>HOW IT WORKS</li>
+						<li>BLOG</li>
+						<li>NEWS</li>
+					</ul>
+				</li>
+				<li>JOIN US
+					<ul>
+						<li>VENDOR</li>
+						<li>PARTNER</li>
+						<li>JOBS</li>
+					</ul>
+				</li>
+			</ul>
+			<div class='copyright'>
+				<span>Copyright &copy; 2018-2018 N3N Inc. and related marks are registered trademarks of Edwrd.</span>
+			</div>
+		</footer>
+	</div>
+	<div class='login-page modal'>
+		<div class='header'>
+			<span>&times;</span>
+		</div>
+		<div class='login-window'>
+			<h1>Log In</h1>
+			<div class='session-form'>
+				<form>
+					<input type="text" name="email">
+					<input type="password" name="password">
+					<div>
+						<input type="submit" value='Go'>
+						<span>Not a member? <a href=""><strong>Sign Up</strong></a></span>
+					</div>
 				</form>
-				<span>-or-</span>
-				<div class='social-login'>
-					<button class='facebook'>Continue with Facebook</button>
-					<button class='instagram'>Continue with Instagram</button>
+				<div class='social-login-page'>
+					<button></button>
+					<button></button>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class='work' id='work'>
-		<h2>How does it work?</h2>
-		<div class='work-detail'>
-			<div class='work-detail-item'>
-				<div class='img-container'>
-					<img src="images/click.jpg">
-				</div>
-				<div class='work-detail-item-content'>
-					<h3>Click It.</h3>
-					<span>I'm a paragraph. Click here to add your own text and edit me. It's easy. Just click "Edit Text" or double click me to add your own content and make changes to the font. I'm a great place for you to tell a story and let your users know a little more about you.</span>
-				</div>
-			</div>
-			<div class='work-detail-item'>
-				<div class='work-detail-item-content'>
-					<h3>Gift It.</h3>
-					<span>I'm a paragraph. Click here to add your own text and edit me. It's easy. Just click "Edit Text" or double click me to add your own content and make changes to the font. I'm a great place for you to tell a story and let your users know a little more about you.</span>
-				</div>
-				<div class='img-container'>
-					<img src="images/gift.jpg">
-				</div>
-			</div>
-			<div class='work-detail-item'>
-				<div class='img-container'>
-					<img src="images/send.jpg">
-				</div>
-				<div class='work-detail-item-content'>
-					<h3>Send It.</h3>
-					<span>I'm a paragraph. Click here to add your own text and edit me. It's easy. Just click "Edit Text" or double click me to add your own content and make changes to the font. I'm a great place for you to tell a story and let your users know a little more about you.</span>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class='business' id='business'>
-		<div class='session-1'>
-			<h4>The Business Times</h4>
-			<hr>
-			<h3>"The smartest product in the market"</h3>
-		</div>
-		<div class='nav-dot'>
-			<i class="far fa-circle"></i>
-		</div>
-	</div>
-	<footer id='footer'>
-		<ul class='footer-category'>
-			<li>HELP & SUPPORT
-				<ul>
-					<li>HELP CENTER</li>
-					<li>WHERE WE ARE</li>
-					<li>PRIVACY & TERMS</li>
-				</ul>
-			</li>
-			<li>EDWRD
-				<ul>
-					<li>HOW IT WORKS</li>
-					<li>BLOG</li>
-					<li>NEWS</li>
-				</ul>
-			</li>
-			<li>JOIN US
-				<ul>
-					<li>VENDOR</li>
-					<li>PARTNER</li>
-					<li>JOBS</li>
-				</ul>
-			</li>
-		</ul>
-		<div class='copyright'>
-			<span>Copyright &copy; 2018-2018 N3N Inc. and related marks are registered trademarks of Edwrd.</span>
-		</div>
-	</footer>
 	<script type="text/javascript" src='javascript/home.js'></script>
 </body>
 </html>
