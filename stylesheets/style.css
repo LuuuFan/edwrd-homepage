@@ -136,11 +136,23 @@ input[type=submit] {
   height: 100%;
   justify-content: space-around;
 }
+.login-page .login-window .session-form form .options {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.login-page .login-window .session-form form .options .checkbox, .login-page .login-window .session-form form .options a {
+  flex: 1;
+}
 .login-page .login-window .session-form form div {
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
+}
+.login-page .login-window .session-form form div span {
+  font-size: 14px;
 }
 .login-page .login-window .session-form form div input[type=submit] {
   text-align: center;
@@ -149,18 +161,20 @@ input[type=submit] {
   background-color: #854dff;
   font-weight: bold;
   color: white;
+  border: 1px solid #854dff;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
 }
 .login-page .login-window .session-form form div input[type=submit]:hover {
   background-color: white;
-  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
   border: 1px solid transparent;
   color: #854dff;
+  transition: all 0.8s;
 }
 .login-page .login-window .session-form form div strong {
   font-weight: bold;
 }
 .login-page .login-window .session-form form input {
-  width: 70%;
+  width: 90%;
   border: 1px solid lightgray;
   padding: 10px 0;
   text-align: left;
