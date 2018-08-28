@@ -51,11 +51,17 @@ $purple: rgba(133, 77, 255, 1);
 				justify-content: space-around;
 				.options{
 					display: flex;
+					width: 90%;
 					flex-direction: row;
 					align-items: center;
 					justify-content: space-between;
-					.checkbox, a{
-						flex: 1;
+					.checkbox{
+						display: flex;
+						align-items: center;	
+						justify-content: flex-start;
+						input{
+							display: none;
+						}
 					}
 				}
 				div{

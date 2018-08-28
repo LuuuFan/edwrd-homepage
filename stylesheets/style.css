@@ -138,12 +138,18 @@ input[type=submit] {
 }
 .login-page .login-window .session-form form .options {
   display: flex;
+  width: 90%;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
-.login-page .login-window .session-form form .options .checkbox, .login-page .login-window .session-form form .options a {
-  flex: 1;
+.login-page .login-window .session-form form .options .checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.login-page .login-window .session-form form .options .checkbox input {
+  display: none;
 }
 .login-page .login-window .session-form form div {
   display: flex;

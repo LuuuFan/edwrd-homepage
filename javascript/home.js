@@ -1,3 +1,5 @@
+
+
 window.addEventListener('scroll', () => {
 	if (window.pageYOffset > 360) {
 		document.querySelector('.home-nav-dot').classList.add('black');		
@@ -35,7 +37,6 @@ window.addEventListener('scroll', () => {
 })
 
 
-
 document.querySelector('.home-nav-dot').querySelectorAll('a').forEach(a => {
 	a.addEventListener('click', (e) => {
 		e.preventDefault;
@@ -50,19 +51,28 @@ document.querySelector('.home-nav-dot').querySelectorAll('a').forEach(a => {
 })
 
 
+let login = false;
 const toggleLoginPage = (e) => {
 	e.preventDefault();
 	const homePage = document.querySelector('.home-page');
 	const loginPage = document.querySelector('.login-page');
-	if (homePage.className.includes('modal')) {
-		homePage.classList.remove('modal');
-		loginPage.classList.remove('is-open');
-		loginPage.classList.add('modal');
+	login = !login;
+	if (login) {
+		$(loginPage).fadeIn(1000);
+		$(homePage).fadeOut(1000);
 	} else {
-		homePage.classList.add('modal');
-		loginPage.classList.add('is-open');
-		loginPage.classList.remove('modal');
+		$(homePage).fadeIn(1000);
+		$(loginPage).fadeOut(1000);
 	}
+	// if (homePage.className.includes('modal')) {
+	// 	homePage.classList.remove('modal');
+	// 	loginPage.classList.remove('is-open');
+	// 	loginPage.classList.add('modal');
+	// } else {
+	// 	homePage.classList.add('modal');
+	// 	loginPage.classList.add('is-open');
+	// 	loginPage.classList.remove('modal');
+	// }
 };
 
 document.querySelector('.login-button').addEventListener('click', toggleLoginPage);
