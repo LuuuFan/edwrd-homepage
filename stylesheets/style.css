@@ -144,12 +144,51 @@ input[type=submit] {
   justify-content: space-between;
 }
 .login-page .login-window .session-form form .options .checkbox {
+  padding-left: 25px;
   display: flex;
   align-items: center;
+  text-align: center;
   justify-content: flex-start;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .login-page .login-window .session-form form .options .checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.login-page .login-window .session-form form .options .checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 14px;
+  width: 14px;
+  background-color: transparent;
+  border: 1px solid gray;
+}
+.login-page .login-window .session-form form .options .checkbox .checkmark:after {
+  content: "";
+  position: absolute;
   display: none;
+  left: 3px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.login-page .login-window .session-form form .options .checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+.login-page .login-window .session-form form .options .checkbox:hover ~ .checkmark {
+  background-color: #ccc;
 }
 .login-page .login-window .session-form form div {
   display: flex;
@@ -186,8 +225,10 @@ input[type=submit] {
   text-align: left;
   text-indent: 15px;
 }
-.login-page .login-window .session-form .social-login-page {
+.login-page .login-window .session-form .social-login-session {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 h1, h2, h3, h4 {

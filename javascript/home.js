@@ -51,6 +51,8 @@ document.querySelector('.home-nav-dot').querySelectorAll('a').forEach(a => {
 })
 
 
+// For Log in Page
+
 let login = false;
 const toggleLoginPage = (e) => {
 	e.preventDefault();
@@ -78,3 +80,17 @@ const toggleLoginPage = (e) => {
 document.querySelector('.login-button').addEventListener('click', toggleLoginPage);
 
 document.querySelector('.login-page .header span').addEventListener('click', toggleLoginPage);
+
+// For Facebook login button render
+const facebookLoginButtonRender = (d, s, id) => {
+	let js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); 
+	js.id = id;
+	js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1&appId=402039176947729&autoLogAppEvents=1';
+	fjs.parentNode.insertBefore(js, fjs);
+};
+
+facebookLoginButtonRender(document, 'script', 'facebook-jssdk');
+
+// instagram login 

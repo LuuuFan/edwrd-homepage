@@ -56,12 +56,54 @@ $purple: rgba(133, 77, 255, 1);
 					align-items: center;
 					justify-content: space-between;
 					.checkbox{
+						padding-left: 25px;
 						display: flex;
-						align-items: center;	
+						align-items: center;
+						text-align: center;
 						justify-content: flex-start;
+						position: relative;
+						cursor: pointer;
+						-webkit-user-select: none;
+					  -moz-user-select: none;
+					  -ms-user-select: none;
+					  user-select: none;
 						input{
-							display: none;
+							position: absolute;
+							opacity: 0;
+							cursor: pointer;							
 						}
+						.checkmark{
+							position: absolute;
+						  top: 0;
+						  left: 0;
+						  height: 14px;
+						  width: 14px;
+						  background-color: transparent;
+						  border: 1px solid gray;
+						}
+						input:checked ~ .checkmark {
+							// can define different style after check
+						}
+						.checkmark:after{
+							content: '';
+							position: absolute;
+							display: none;
+							left: 3px;
+						  top: 0px;
+						  width: 5px;
+						  height: 10px;
+						  border: solid black;
+						  border-width: 0 3px 3px 0;
+						  -webkit-transform: rotate(45deg);
+						  -ms-transform: rotate(45deg);
+						  transform: rotate(45deg);
+						}
+						input:checked ~ .checkmark:after{
+							display: block;
+						}
+					}
+					.checkbox:hover ~ .checkmark{
+						background-color: #ccc;
 					}
 				}
 				div{
@@ -100,8 +142,14 @@ $purple: rgba(133, 77, 255, 1);
 					text-indent: 15px;
 				}
 			}
-			.social-login-page{
+			.social-login-session{
 				flex: 1;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: flex-start;
+				padding-top: 30px;
 			}
 		}
 	}
