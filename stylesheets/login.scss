@@ -65,7 +65,7 @@ $purple: rgba(133, 77, 255, 1);
 					input[type='submit']:hover{
 						background-color: white;
 		  			box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2);
-		  			border: none;
+		  			border: 1px solid transparent;
 		  			color: $purple;
 					}
 					strong{
