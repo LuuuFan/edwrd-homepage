@@ -1,4 +1,7 @@
 
+document.addEventListener('DOMContentLoaded', () => {
+	document.querySelectorAll('#home form input[type="text"]').forEach(input => input.addEventListener('change', hideTooltip))
+});
 
 window.addEventListener('scroll', () => {
 	if (window.pageYOffset > 360) {
@@ -69,7 +72,17 @@ document.querySelector('#home form').addEventListener('submit', (e) => {
 		// Run the following code after successful api call
 		toggleLoginPage(e);
 	}
-})
+});
+
+
+const hideTooltip = () => {
+	if ($('.email-error').css('display') === 'block') {
+		$('.email-error').fadeOut(800);
+	}
+	if ($('.zipcode-error').css('display') === 'block') {
+		$('.zipcode-error').fadeOut(800);
+	}	
+}
 
 const validateEmail = (email) => {
 	const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
