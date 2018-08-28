@@ -150,6 +150,29 @@ $purple: rgba(133, 77, 255, 1);
 				align-items: center;
 				justify-content: flex-start;
 				padding-top: 30px;
+				a{
+					margin-top: 20px;
+					display: flex;
+					align-items: center;
+					justify-content: flex-start;
+					width: 236px;
+					height: 40px;
+					text-align: center;
+					border-radius: 5px;
+					background-color: rgba(252, 123, 68, 1);
+					color: white;
+					span{
+						flex: 1;
+					}
+					i{
+						margin: 0 13px 0 10px;
+						font-size: 28px;
+					}
+				}
+				a:hover{
+					background-color: rgba(58, 181, 205, 1);
+					transition: all .8s;
+				}
 			}
 		}
 	}

@@ -234,6 +234,29 @@ input[type=submit] {
   justify-content: flex-start;
   padding-top: 30px;
 }
+.login-page .login-window .session-form .social-login-session a {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 236px;
+  height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #fc7b44;
+  color: white;
+}
+.login-page .login-window .session-form .social-login-session a span {
+  flex: 1;
+}
+.login-page .login-window .session-form .social-login-session a i {
+  margin: 0 13px 0 10px;
+  font-size: 28px;
+}
+.login-page .login-window .session-form .social-login-session a:hover {
+  background-color: #3ab5cd;
+  transition: all 0.8s;
+}
 
 h1, h2, h3, h4 {
   font-family: "Montserrat", sans-serif;
@@ -508,21 +531,17 @@ header nav ul .nav-more:hover .dropdown {
 }
 .login-session .login-window .social-login {
   width: 70%;
-  margin: 40px auto;
+  margin: 10px auto;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
-}
-.login-session .login-window .social-login a {
-  width: 45%;
 }
 .login-session .login-window .social-login button {
   font-size: 12px;
-  width: 100%;
+  width: 181px;
+  height: 28px;
   color: #ffffff;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 .login-session .login-window .social-login button:hover {
   background-color: #3ab5cd;

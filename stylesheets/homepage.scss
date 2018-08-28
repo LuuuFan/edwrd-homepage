@@ -286,20 +286,16 @@ header{
 		}
 		.social-login{
 			width: 70%;
-			margin: 40px auto;
+			margin: 10px auto;
 			display: flex;
-			align-items:center;
+			align-items:flex-end;
 			justify-content: space-between;
-			a{
-				width: 45%;
-			}
 			button{
 				font-size: 12px;
-				width: 100%;
+				width: 181px;
+				height: 28px;
 				color: $white;
-				padding-top: 10px;
-				padding-bottom: 10px;
-				border-radius: 5px;
+				border-radius: 3px;
 			}
 			button:hover{
 				background-color: rgba(58, 181, 205, 1);
@@ -311,7 +307,6 @@ header{
 			}
 			.instagram{
 				background-color: rgba(252, 123, 68, 1);
-
 			}
 		}
 	}

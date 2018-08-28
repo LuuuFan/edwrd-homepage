@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Edwrd</title>
-	<link rel="icon" type='image/png' href="images/bluelogo.png">
+	<link rel="icon" type='image/png' href="images/colorfulogo4.png">
 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 	<script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -15,7 +15,7 @@
 			<div class='logo'>
 				<h1>edwrd</h1>
 				<div class='logo-container'>
-					<img src="images/bluelogo.png">
+					<img src="images/colorfulogo4.png">
 				</div>
 			</div>
 			<nav>
@@ -86,9 +86,7 @@
 					</form>
 					<span>-or-</span>
 					<div class='social-login'>
-						<a href="">
-							<button class='facebook'>Continue with Facebook</button>
-						</a>
+						<div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
 						<!-- setup instagram callback -->
 						<a href="https://api.instagram.com/oauth/authorize/?client_id=578b88fd6efb4724ae0af5f4d2f7249e&redirect_uri=http://localhost:3000&response_type=code">
 							<button class='instagram'>Continue with Instagram</button>
@@ -193,8 +191,10 @@
 				</form>
 				<div class='social-login-session'>
 					<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
-					<div id="fb-root"></div>
-					<button></button>
+					<a href="https://api.instagram.com/oauth/authorize/?client_id=578b88fd6efb4724ae0af5f4d2f7249e&redirect_uri=http://localhost:3000&response_type=code">
+						<i class="fab fa-instagram"></i>
+						<span>Log in With Instagram</span>
+					</a>
 				</div>
 			</div>
 		</div>
