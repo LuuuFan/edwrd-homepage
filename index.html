@@ -72,9 +72,15 @@
 					<h2>Celebrations made easy</h2>
 					<span>For the busy professional, by the busy professional.</span>
 					<form>
-						<div>
-							<input type="text" name="email" placeholder="Email">
-							<input type="text" name="zipcode" placeholder="Zip">
+						<div class='signup-session'>
+							<div class='email'>
+								<input type="text" name="email" placeholder="Email">
+								<div class='tooltip email-error'>Please input valid email address</div>
+							</div>
+							<div class='zipcode'>
+								<input type="text" name="zipcode" placeholder="Zip">
+								<div class='tooltip zipcode-error'>Please input valid zipcode</div>
+							</div>
 						</div>
 						<input type="submit" name="" value="Create Account">
 					</form>

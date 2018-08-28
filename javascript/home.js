@@ -50,6 +50,35 @@ document.querySelector('.home-nav-dot').querySelectorAll('a').forEach(a => {
 	})
 })
 
+document.querySelector('#home form').addEventListener('submit', (e) => {
+	e.preventDefault();
+	const email = document.querySelectorAll('#home form input')[0];
+	const zipcode = document.querySelectorAll('#home form input')[1];
+	if (!validateEmail(email.value)) {
+		$('.email-error').fadeIn(800);
+	} else if (!validateZipcode(zipcode.value)) {
+		$('.zipcode-error').fadeIn(800);
+	} else {
+		// !!!!!!!!IMPORT!!!!!!!!! Do API call then run the following code!!!!!!!!!!!!!!!!!
+		// $.ajax({
+
+		// }).then(res => {
+			// run the code below~~~~
+		// })
+
+		// Run the following code after successful api call
+		toggleLoginPage(e);
+	}
+})
+
+const validateEmail = (email) => {
+	const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+};
+
+const validateZipcode = (zipcode) => {
+	return /(^\d{5}$)|(^\d{5}-\d{4}$)/.test(zipcode);
+}
 
 // For Log in Page
 

@@ -109,8 +109,8 @@ input[type=submit] {
 }
 .login-page .login-window {
   width: 800px;
-  margin: 10% auto;
-  height: 40%;
+  margin: auto;
+  height: 380px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -227,12 +227,21 @@ input[type=submit] {
 }
 .login-page .login-window .session-form .social-login-session {
   flex: 1;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 30px;
 }
 
 h1, h2, h3, h4 {
   font-family: "Montserrat", sans-serif;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
 }
 
 header {
@@ -420,22 +429,38 @@ header nav ul .nav-more:hover .dropdown {
   width: 70%;
   margin: 30px auto;
 }
-.login-session .login-window form div {
+.login-session .login-window form .signup-session {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 15px;
 }
-.login-session .login-window form div input {
-  padding: 7px 15px;
+.login-session .login-window form .signup-session .email {
+  width: 60%;
+}
+.login-session .login-window form .signup-session .zipcode {
+  width: 35%;
+}
+.login-session .login-window form .signup-session div {
+  position: relative;
+}
+.login-session .login-window form .signup-session div .tooltip {
+  display: none;
+  position: absolute;
+  font-size: 12px;
+  top: -25px;
+  left: 10%;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 3px 5px;
+  border-radius: 5px;
+  color: white;
+}
+.login-session .login-window form .signup-session input {
+  padding: 7px 0;
+  text-indent: 20px;
   border: 1px solid lightgray;
   text-align: left;
-}
-.login-session .login-window form div input:first-of-type {
-  width: 55%;
-}
-.login-session .login-window form div input:last-of-type {
-  width: 25%;
+  width: 100%;
 }
 .login-session .login-window form input[type=submit] {
   color: #ffffff;
